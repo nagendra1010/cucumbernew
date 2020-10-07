@@ -1,0 +1,177 @@
+aug. 21, 2020 9:44:17 AM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver resolve
+INFO: Remoting server accepts the following protocols: [JNLP4-connect, Ping]
+aug. 21, 2020 4:40:47 PM hudson.util.ProcessTree getKillers
+WARNING: Failed to obtain killers
+hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2b89a097:JNLP4-connect connection to pcliwapp0068.tdk.dk/10.183.12.190:54908": Remote call on JNLP4-connect connection to pcliwapp0068.tdk.dk/10.183.12.190:54908 failed. The channel is closing down or has closed down
+	at hudson.remoting.Channel.call(Channel.java:991)
+	at hudson.util.ProcessTree.getKillers(ProcessTree.java:198)
+	at hudson.util.ProcessTree$OSProcess.killByKiller(ProcessTree.java:261)
+	at hudson.util.ProcessTree$WindowsOSProcess.killRecursively(ProcessTree.java:546)
+	at hudson.util.ProcessTree.killAll(ProcessTree.java:182)
+	at hudson.Proc$LocalProc.destroy(Proc.java:387)
+	at hudson.Proc$LocalProc.join(Proc.java:360)
+	at hudson.Launcher$RemoteLaunchCallable$1.join(Launcher.java:1321)
+	at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.remoting.RemoteInvocationHandler$RPCRequest.perform(RemoteInvocationHandler.java:931)
+	at hudson.remoting.RemoteInvocationHandler$RPCRequest.call(RemoteInvocationHandler.java:905)
+	at hudson.remoting.RemoteInvocationHandler$RPCRequest.call(RemoteInvocationHandler.java:857)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:211)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:54)
+	at hudson.remoting.Request$2.run(Request.java:369)
+	at hudson.remoting.InterceptingExecutorService$1.call(InterceptingExecutorService.java:72)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:117)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.nio.channels.ClosedChannelException
+	at org.jenkinsci.remoting.protocol.NetworkLayer.onRecvClosed(NetworkLayer.java:154)
+	at org.jenkinsci.remoting.protocol.impl.BIONetworkLayer.access$1800(BIONetworkLayer.java:48)
+	at org.jenkinsci.remoting.protocol.impl.BIONetworkLayer$Reader.run(BIONetworkLayer.java:264)
+	... 4 more
+
+aug. 21, 2020 4:40:50 PM hudson.Launcher$RemoteLaunchCallable$1 join
+INFO: Failed to synchronize IO streams on the channel hudson.remoting.Channel@2b89a097:JNLP4-connect connection to pcliwapp0068.tdk.dk/10.183.12.190:54908
+hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2b89a097:JNLP4-connect connection to pcliwapp0068.tdk.dk/10.183.12.190:54908": Remote call on JNLP4-connect connection to pcliwapp0068.tdk.dk/10.183.12.190:54908 failed. The channel is closing down or has closed down
+	at hudson.remoting.Channel.call(Channel.java:991)
+	at hudson.remoting.Channel.syncIO(Channel.java:1730)
+	at hudson.Launcher$RemoteLaunchCallable$1.join(Launcher.java:1328)
+	at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.remoting.RemoteInvocationHandler$RPCRequest.perform(RemoteInvocationHandler.java:931)
+	at hudson.remoting.RemoteInvocationHandler$RPCRequest.call(RemoteInvocationHandler.java:905)
+	at hudson.remoting.RemoteInvocationHandler$RPCRequest.call(RemoteInvocationHandler.java:857)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:211)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:54)
+	at hudson.remoting.Request$2.run(Request.java:369)
+	at hudson.remoting.InterceptingExecutorService$1.call(InterceptingExecutorService.java:72)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:117)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.nio.channels.ClosedChannelException
+	at org.jenkinsci.remoting.protocol.NetworkLayer.onRecvClosed(NetworkLayer.java:154)
+	at org.jenkinsci.remoting.protocol.impl.BIONetworkLayer.access$1800(BIONetworkLayer.java:48)
+	at org.jenkinsci.remoting.protocol.impl.BIONetworkLayer$Reader.run(BIONetworkLayer.java:264)
+	... 4 more
+
+aug. 21, 2020 4:40:50 PM hudson.remoting.Request$2 run
+INFO: Failed to send back a reply to the request hudson.remoting.Request$2@6369a09d: hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2b89a097:JNLP4-connect connection to pcliwapp0068.tdk.dk/10.183.12.190:54908": channel is already closed
+aug. 21, 2020 4:41:01 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
+INFO: Master isn't ready to talk to us on http://10.183.12.190:8080/tcpSlaveAgentListener/. Will try again: response code=503
+aug. 21, 2020 4:41:11 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver resolve
+INFO: Remoting server accepts the following protocols: [JNLP4-connect, Ping]
+aug. 21, 2020 4:49:47 PM org.jvnet.winp.Native loadByUrl
+WARNING: Failed to load DLL from static location
+java.lang.UnsatisfiedLinkError: Native Library C:\Cucumber\remoting\jarCache\44\winp.x64.BFFE30B3B50581290B1866EF8D48C609.dll already loaded in another classloader
+	at java.lang.ClassLoader.loadLibrary0(Unknown Source)
+	at java.lang.ClassLoader.loadLibrary(Unknown Source)
+	at java.lang.Runtime.load0(Unknown Source)
+	at java.lang.System.load(Unknown Source)
+	at org.jvnet.winp.Native.loadDll(Native.java:242)
+	at org.jvnet.winp.Native.loadByUrl(Native.java:162)
+	at org.jvnet.winp.Native.load(Native.java:124)
+	at org.jvnet.winp.Native.<clinit>(Native.java:93)
+	at org.jvnet.winp.WinProcess.enableDebugPrivilege(WinProcess.java:245)
+	at hudson.util.ProcessTree$Windows.<clinit>(ProcessTree.java:701)
+	at hudson.util.ProcessTree.get(ProcessTree.java:447)
+	at hudson.Launcher$RemoteLauncher$KillTask.call(Launcher.java:1100)
+	at hudson.Launcher$RemoteLauncher$KillTask.call(Launcher.java:1091)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:211)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:54)
+	at hudson.remoting.Request$2.run(Request.java:369)
+	at hudson.remoting.InterceptingExecutorService$1.call(InterceptingExecutorService.java:72)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:117)
+	at java.lang.Thread.run(Unknown Source)
+
+aug. 22, 2020 4:54:53 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
+INFO: Master isn't ready to talk to us on http://10.183.12.190:8080/tcpSlaveAgentListener/. Will try again: response code=503
+aug. 22, 2020 4:55:04 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver resolve
+INFO: Remoting server accepts the following protocols: [JNLP4-connect, Ping]
+aug. 24, 2020 9:14:23 AM org.jvnet.winp.Native loadByUrl
+WARNING: Failed to load DLL from static location
+java.lang.UnsatisfiedLinkError: Native Library C:\Cucumber\remoting\jarCache\44\winp.x64.BFFE30B3B50581290B1866EF8D48C609.dll already loaded in another classloader
+	at java.lang.ClassLoader.loadLibrary0(Unknown Source)
+	at java.lang.ClassLoader.loadLibrary(Unknown Source)
+	at java.lang.Runtime.load0(Unknown Source)
+	at java.lang.System.load(Unknown Source)
+	at org.jvnet.winp.Native.loadDll(Native.java:242)
+	at org.jvnet.winp.Native.loadByUrl(Native.java:162)
+	at org.jvnet.winp.Native.load(Native.java:124)
+	at org.jvnet.winp.Native.<clinit>(Native.java:93)
+	at org.jvnet.winp.WinProcess.enableDebugPrivilege(WinProcess.java:245)
+	at hudson.util.ProcessTree$Windows.<clinit>(ProcessTree.java:701)
+	at hudson.util.ProcessTree.get(ProcessTree.java:447)
+	at hudson.Launcher$RemoteLauncher$KillTask.call(Launcher.java:1100)
+	at hudson.Launcher$RemoteLauncher$KillTask.call(Launcher.java:1091)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:211)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:54)
+	at hudson.remoting.Request$2.run(Request.java:369)
+	at hudson.remoting.InterceptingExecutorService$1.call(InterceptingExecutorService.java:72)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:117)
+	at java.lang.Thread.run(Unknown Source)
+
+aug. 24, 2020 2:07:17 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
+INFO: Failed to connect to the master. Will try again: java.net.SocketTimeoutException connect timed out
+aug. 24, 2020 2:07:31 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
+INFO: Failed to connect to the master. Will try again: java.net.ConnectException Connection refused: connect
+aug. 24, 2020 2:07:46 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
+INFO: Failed to connect to the master. Will try again: java.net.SocketTimeoutException connect timed out
+aug. 24, 2020 2:07:56 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
+INFO: Master isn't ready to talk to us on http://10.183.12.190:8080/tcpSlaveAgentListener/. Will try again: response code=503
+aug. 24, 2020 2:08:06 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver resolve
+INFO: Remoting server accepts the following protocols: [JNLP4-connect, Ping]
+aug. 24, 2020 2:10:36 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
+INFO: Failed to connect to the master. Will try again: java.net.SocketTimeoutException connect timed out
+aug. 24, 2020 2:10:50 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
+INFO: Failed to connect to the master. Will try again: java.net.ConnectException Connection refused: connect
+aug. 24, 2020 2:11:07 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
+INFO: Master isn't ready to talk to us on http://10.183.12.190:8080/tcpSlaveAgentListener/. Will try again: response code=503
+aug. 24, 2020 2:11:17 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver resolve
+INFO: Remoting server accepts the following protocols: [JNLP4-connect, Ping]
+aug. 24, 2020 2:41:52 PM org.jvnet.winp.Native loadByUrl
+WARNING: Failed to load DLL from static location
+java.lang.UnsatisfiedLinkError: Native Library C:\Cucumber\remoting\jarCache\44\winp.x64.BFFE30B3B50581290B1866EF8D48C609.dll already loaded in another classloader
+	at java.lang.ClassLoader.loadLibrary0(Unknown Source)
+	at java.lang.ClassLoader.loadLibrary(Unknown Source)
+	at java.lang.Runtime.load0(Unknown Source)
+	at java.lang.System.load(Unknown Source)
+	at org.jvnet.winp.Native.loadDll(Native.java:242)
+	at org.jvnet.winp.Native.loadByUrl(Native.java:162)
+	at org.jvnet.winp.Native.load(Native.java:124)
+	at org.jvnet.winp.Native.<clinit>(Native.java:93)
+	at org.jvnet.winp.WinProcess.enableDebugPrivilege(WinProcess.java:245)
+	at hudson.util.ProcessTree$Windows.<clinit>(ProcessTree.java:701)
+	at hudson.util.ProcessTree.get(ProcessTree.java:447)
+	at hudson.Launcher$RemoteLauncher$KillTask.call(Launcher.java:1100)
+	at hudson.Launcher$RemoteLauncher$KillTask.call(Launcher.java:1091)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:211)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:54)
+	at hudson.remoting.Request$2.run(Request.java:369)
+	at hudson.remoting.InterceptingExecutorService$1.call(InterceptingExecutorService.java:72)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:117)
+	at java.lang.Thread.run(Unknown Source)
+
+aug. 25, 2020 3:02:02 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
+INFO: Failed to connect to the master. Will try again: java.net.SocketTimeoutException connect timed out
+aug. 25, 2020 3:02:17 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
+INFO: Failed to connect to the master. Will try again: java.net.SocketTimeoutException connect timed out
+aug. 25, 2020 3:02:28 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
+INFO: Failed to connect to the master. Will try again: java.net.ConnectException Connection refused: connect
+aug. 25, 2020 3:02:46 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
+INFO: Failed to connect to the master. Will try again: java.net.SocketTimeoutException Read timed out
+aug. 25, 2020 3:02:58 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver resolve
+INFO: Remoting server accepts the following protocols: [JNLP4-connect, Ping]

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="37.897874">
+<testcase classname="Create Cases" name="Verify registration of Small Yes" time="37.897874">
+<failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[text()='Customer Service Agent Dashboard']&quot;}&#10;  (Session info: chrome=85.0.4183.83)&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.7.0', revision: '2321c73', time: '2017-11-02T22:22:35.584Z'&#10;System info: host: 'PCLIWAPP0068', ip: '10.183.12.190', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.83, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\m81079\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63774}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 4fae09258ad0bdd359d09c98a44bb64b&#10;*** Element info: {Using=xpath, value=.//*[text()='Customer Service Agent Dashboard']}&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:472)&#13;&#10;&#9;at org.openqa.selenium.By$ByXPath.findElement(By.java:361)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)&#13;&#10;&#9;at ReusableFunctions.Reusable.waitForelement(Reusable.java:298)&#13;&#10;&#9;at ReusableFunctions.Reusable.getElement(Reusable.java:250)&#13;&#10;&#9;at SeleniumGlueCode.Address.the_should_be_displayed(Address.java:147)&#13;&#10;&#9;at ✽.Then the &quot;CHS Homepage&quot; should be displayed(1.Cases.feature:16)&#13;&#10;"><![CDATA[Given the user is on the login page of "Case Handling System" application...passed
+When the user enters "UserName" in the "Microsoft UserName" textbox.........passed
+When the user clicks on the "Microsoft Next" button.........................passed
+Then the "CHS Homepage" should be displayed.................................failed
+When the user clicks on the "Addresses" button..............................skipped
+Then the "Aktive Adresser Page" should be displayed.........................skipped
+When the user enters "Address" in the "Search this View" textbox............skipped
+And the user clicks on the "Search" button..................................skipped
+Then the "Searched Address" with text "Address" should be displayed.........skipped
+When the user clicks on the "Searched Address" button.......................skipped
+Then the "Address Page" with text "Address" should be displayed.............skipped
+And the value of "Installation Address" should be "Address".................skipped
+And the "Primary Contact" with text "ContactName" should be displayed.......skipped
+When the user clicks on the "Cases" button..................................skipped
+Then the "Cases Page" should be displayed...................................skipped
+When the user clicks on the "New Case" button...............................skipped
+Then the "New Case Page" should be displayed................................skipped
+When the user enters "Address" in the "Adresse" Itextbox....................skipped
+And the user allows "1" seconds to load the "Adresse Searched Result".......skipped
+Then the user clicks on the "Adresse Searched Result" Ibutton...............skipped
+When the user enters "ContactName" in the "Contact" textbox.................skipped
+And the user allows "2" seconds to load the "Contact Searched Result".......skipped
+Then the user clicks on the "Contact Searched Result" button................skipped
+When the user enters "DepartmentName" in the "Department" textbox and then clicks on the "Search" button.skipped
+And the user again clicks on "Search" if "Department Searched Result" is not visible.skipped
+And the user allows "2" seconds to load the "Contact Searched Result".......skipped
+Then the user clicks on the "Department Searched Result" button.............skipped
+When the user enters "Kundeservice Subject Name" in the "Subject" textbox and then clicks on the "Search" button.skipped
+And the user again clicks on "Search" if "Subject Searched Result" is not visible.skipped
+And the user allows "2" seconds to load the "Contact Searched Result".......skipped
+Then the user clicks on the "Subject Searched Result" button................skipped
+And the user enters "-Register Small Yes" in the "Description" textbox......skipped
+When the user clicks on the "Save" button...................................skipped
+And the "General Information Contact Name" with text "ContactName" should be displayed.skipped
+And the user allows "2" seconds to load the "Result"........................skipped
+And the user notes the below mention fields for further evaluation..........skipped
+And the user allows "3" seconds to load the "Result"........................skipped
+When the user clicks on the "Address Information" button....................skipped
+Then the "Fibernet Availability" with text "-Fiber possible" should be displayed.skipped
+When the user clicks on the "Register Small Yes Button" button..............skipped
+Then the "Registration send to Agilic" should be displayed..................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//*[text()='Customer Service Agent Dashboard']"}
+  (Session info: chrome=85.0.4183.83)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.7.0', revision: '2321c73', time: '2017-11-02T22:22:35.584Z'
+System info: host: 'PCLIWAPP0068', ip: '10.183.12.190', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.83, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\m81079\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63774}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 4fae09258ad0bdd359d09c98a44bb64b
+*** Element info: {Using=xpath, value=.//*[text()='Customer Service Agent Dashboard']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:472)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at ReusableFunctions.Reusable.waitForelement(Reusable.java:298)
+	at ReusableFunctions.Reusable.getElement(Reusable.java:250)
+	at SeleniumGlueCode.Address.the_should_be_displayed(Address.java:147)
+	at ✽.Then the "CHS Homepage" should be displayed(1.Cases.feature:16)
+]]></failure>
+</testcase>
+</testsuite>
